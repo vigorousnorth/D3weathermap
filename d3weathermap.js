@@ -102,7 +102,7 @@ var colorrange = d3.scale.linear()
    .range(["rgb(0,191,255)", "rgb(255,0,0)"]);
 
    
-d3.json("d3/mainecitiesandcounties_topo.json", function(error, topo) {
+d3.json("mainecitiesandcounties_topo.json", function(error, topo) {
 
 // Append temperature data to data object
 for (city in temps) {	
@@ -140,7 +140,7 @@ var cities =
 		
 	
 var citylabels =			
-	g.append("g").selectAll(".currenttemperature-label")
+ g.append("g").selectAll(".currenttemperature-label")
     .data(topojson.feature(topo, topo.objects.cities).features)
   .enter().append("text")
     .attr("class", "currenttemperature-label")
